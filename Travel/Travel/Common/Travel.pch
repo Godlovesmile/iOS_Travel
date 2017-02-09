@@ -1,0 +1,126 @@
+//
+//  Travel.pch
+//  Travel
+//
+//  Created by Alice on 16/2/28.
+//  Copyright © 2016年 Alice. All rights reserved.
+//
+
+#ifndef Travel_pch
+#define Travel_pch
+
+
+/*
+ 外网登录帐号:smile@218.241.181.202
+ 
+ 测试帐号:  yy@218.241.181.202
+ 
+ 寝室好友:you00@wxhl(王鹏)  you01@wxhl(肖伟) you02@wxhl(金赛) you03@wxhl(张飞) you04@wxhl(刘奇胜)
+ 
+ 旅游:ly@wxhl
+ 
+ 那些年人:ren@wxhl
+
+ 
+ 
+ 
+ 
+ 
+ 自己搭建的服务器帐号:alice@127.0.0.1
+ 
+ 测试帐号: ceshi01  ceshi02 ceshi03
+ 
+ 
+ 
+ */
+
+//常用头文件
+#import "UIViewExt.h"
+
+
+//XMPP
+#import <UIKit/UIKit.h>
+
+#import "XMPPFramework.h"
+
+#import "XMPPManager.h"
+
+//处理网络
+#import "NetworkManager.h"
+
+//SDWebImage加载图片
+#import "UIImageView+WebCache.h"
+
+//上下刷新
+#import "MJRefresh.h"
+
+#import "UIImage+MJ.h"
+
+
+// 1.判断是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+//分享页面
+/** 表格的边框宽度 */
+#define IWStatusTableBorder 5
+
+// 6.微博cell内部相册
+#define IWPhotoW 70
+#define IWPhotoH 70
+#define IWPhotoMargin 10
+
+/** 昵称的字体 */
+#define IWStatusNameFont [UIFont systemFontOfSize:15]
+/** 被转发微博作者昵称的字体 */
+#define IWRetweetStatusNameFont IWStatusNameFont
+
+/** 正文的字体 */
+#define IWStatusContentFont [UIFont systemFontOfSize:13]
+/** 被转发微博正文的字体 */
+#define IWRetweetStatusContentFont IWStatusContentFont
+
+/** 时间的字体 */
+#define IWStatusTimeFont [UIFont systemFontOfSize:12]
+/** 来源的字体 */
+#define IWStatusSourceFont IWStatusTimeFont
+
+
+/** cell的边框宽度 */
+#define IWStatusCellBorder 10
+
+
+
+// 2.获得RGB颜色
+#define IWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define kCellBackGroundColor [UIColor colorWithRed:245.0 / 255 green:245.0 / 255 blue:245.0 / 255 alpha:1.0]
+
+
+
+// 7.常用的对象
+#define IWNotificationCenter [NSNotificationCenter defaultCenter]
+
+//8.点击查询的链接
+#define kSearchUrl @"http://api.breadtrip.com/v2/search/?key=%@&sign=7d7c7100787a56131dd24fffadfa9110"
+
+
+
+
+
+
+
+#define KeyWindow [UIApplication sharedApplication].keyWindow
+
+/*--屏幕的宽高----*/
+#define kScreenWidth     [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight    [UIScreen mainScreen].bounds.size.height
+
+//自定义输出语句
+#ifdef DEBUG   //处于开发阶段
+#define GKLog(...) NSLog(__VA_ARGS__)
+#else  //处于发布阶段
+#define GKLog(...)
+#endif
+
+
+#endif /* Travel_pch */
